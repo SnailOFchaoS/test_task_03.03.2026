@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './CreateNewUserLink.module.scss'
 
 const CreateNewUserLink = () => {
@@ -10,7 +11,7 @@ const CreateNewUserLink = () => {
 			</div>
 			<div className={styles.linkRow}>
 				<span className={styles.questionText}>Нет аккаунта?</span>
-				<a href="#" className={styles.linkText}>Создать</a>
+				<Link to="/create" className={styles.linkText}>Создать</Link>
 			</div>
     </div>
   )
