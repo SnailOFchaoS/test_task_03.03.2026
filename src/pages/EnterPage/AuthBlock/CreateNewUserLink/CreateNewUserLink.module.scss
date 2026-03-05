@@ -1,0 +1,62 @@
+@use '../../../../constants/styles.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	@include scaled(margin-top, 16px);
+
+	.textRow, .linkRow{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		.line{
+			@include scaled(width, 175px);
+			height: 1px;
+			background-color: $line-color;
+		}
+
+		.gradientText{
+			@include scaled(font-size, 16px);
+			@include scaled(margin-left, 10px);
+			@include scaled(margin-right, 10px);
+			line-height: 150%;
+			font-family: 'Inter', sans-serif;
+			font-weight: 500;
+			background: linear-gradient(to bottom, rgba(186, 186, 186, 1) 0%, rgba(203, 203, 203, 1) 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+
+		.questionText{
+			@include scaled(font-size, 18px);
+			line-height: 150%;
+			font-family: 'Inter', sans-serif;
+			font-weight: 500;
+			color: $link-color-grey;
+		}
+
+		.linkText{
+			@include scaled(margin-left, 4px);
+			@include scaled(font-size, 18px);
+			line-height: 150%;
+			font-family: 'Inter', sans-serif;
+			font-weight: 500;
+			color: $link-color-blue;
+			text-decoration: underline;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+	}
+
+	.linkRow{
+		@include scaled(margin-top, 32px);
+	}
+}

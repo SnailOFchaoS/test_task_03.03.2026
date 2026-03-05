@@ -1,0 +1,138 @@
+@use '../../../constants/styles.scss' as *;
+
+.container {
+  display: flex;
+	@include scaled(padding, 6px);
+	@include scaled(width, 527px);
+	@include scaled(height, 716px);
+	@include scaled(border-radius, 40px);
+	background-color: $white-color;
+	box-shadow: 0 24px 32px 0 rgba(0, 0, 0, 0.04);
+
+	.workSpace {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		@include scaled(border-radius, 32px);
+		@include scaled(padding-right, 58px);
+		@include scaled(padding-left, 58px);
+		border: 1px solid transparent;
+		background: linear-gradient(to bottom, #F8F8F8 0%, #FFFFFF 50%) padding-box,
+			linear-gradient(to bottom, #EDEDED 20%, rgba(237, 237, 237, 0) 100%) border-box;
+		background-clip: padding-box, border-box;
+
+		.logoImage{
+			@include scaled(margin-top, 48px);
+			@include scaled(width, 52px);
+			@include scaled(height, 52px);
+			border-radius: 50%;
+			box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.03);
+		}
+
+		.headerText{
+			@include scaled(margin-top, 32px);
+			@include scaled(font-size, 40px);
+			line-height: 110%;
+			letter-spacing: -1.5%;
+			font-weight: 600;
+			color: $text-color;
+			font-family: 'Inter', sans-serif;
+		}
+
+		.descriptionText{
+			@include scaled(margin-top, 12px);
+			@include scaled(font-size, 18px);
+			line-height: 150%;
+			font-family: 'Inter', sans-serif;
+			font-weight: 500;
+			background: linear-gradient(to bottom, rgba(186, 186, 186, 1) 0%, rgba(203, 203, 203, 1) 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			@include scaled(margin-bottom, 16px);
+		}
+
+		.inputContainer{
+			display: flex;
+			flex-direction: column;
+			@include scaled(gap, 6px);
+			@include scaled(margin-top, 16px);
+			width: 100%;
+
+			.inputLabel{
+				@include scaled(font-size, 18px);
+				line-height: 150%;
+				letter-spacing: -1.5%;
+				font-weight: 500;
+				color: $text-color;
+				font-family: 'Inter', sans-serif;
+			}
+		}
+
+		.checkboxRow{
+			display: flex;
+			align-items: center;
+			@include scaled(margin-top, 20px);
+			cursor: pointer;
+			align-self: flex-start;
+
+			.checkbox{
+				@include scaled(width, 18px);
+				@include scaled(height, 18px);
+				@include scaled(border-radius, 4px);
+				@include scaled(margin, 3px);
+				border: 2px solid $text-color-secondary;
+				accent-color: #CACACA;
+				cursor: pointer;
+				flex-shrink: 0;
+			}
+	
+			.checkboxLabel{
+				@include scaled(font-size, 16px);
+				@include scaled(margin-left, 10px);
+				line-height: 150%;
+				font-weight: 500;
+				color: #9C9C9C;
+				font-family: 'Inter', sans-serif;
+			}
+		}
+
+		.loginButton{
+			@include scaled(width, 100%);
+			@include scaled(height, 54px);
+			@include scaled(border-radius, 12px);
+			@include scaled(margin-top, 20px);
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			background-color: $button-color;
+			border: 1px solid $button-border-color;
+			box-shadow: inset 0 -2px 0 1px rgba(0, 0, 0, 0.08);
+			color: $white-color;
+			font-family: 'Inter', sans-serif;
+			line-height: 120%;
+			letter-spacing: -1%;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background-color 0.5s ease;
+
+			&:hover {
+				background-color: $button-border-color;
+			}
+		}
+	}
+}
+
+@media (max-width: 1919px) {
+	.container {
+		box-shadow: 0 (24px * 0.67) (32px * 0.67) 0 rgba(0, 0, 0, 0.04);
+		.workSpace {
+			.logoImage{
+				box-shadow: 0px (12px * 0.67) (8px * 0.67) 0px rgba(0, 0, 0, 0.03);
+			}
+		}
+	}
+}
