@@ -1,0 +1,16 @@
+$background-color: #F9F9F9;
+$white-color: #FFFFFF;
+$text-color: #232323;
+$text-color-secondary: #E0E0E0;
+$button-color: #242EDB;
+$button-border-color: #367AFF;
+$line-color: #EDEDED;
+$link-color-grey: #6C6C6C;
+$link-color-blue: #242EDB;
+
+@mixin scaled($property, $value, $scale: 0.67) {
+	#{$property}: $value * $scale;
+	@media (min-width: 1920px) {
+		#{$property}: $value;
+	}
+}

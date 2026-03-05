@@ -1,0 +1,38 @@
+@use '../../../../constants/styles.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+	@include scaled(min-height, 55px);
+	@include scaled(border-radius, 12px);
+	border: 1.5px solid $text-color-secondary;
+  flex: 1;
+	@include scaled(padding-left, 16px);
+	@include scaled(padding-right, 16px);
+
+	.lockImage{
+		@include scaled(width, 24px);
+		@include scaled(height, 24px);
+		@include scaled(margin-right, 14px);
+	}
+
+	.eyeImage{
+		@include scaled(width, 24px);
+		@include scaled(height, 24px);
+		@include scaled(margin-left, 14px);
+		cursor: pointer;
+	}
+
+	.input{
+		width: 100%;
+		border: none;
+		outline: none;
+		@include scaled(font-size, 18px);
+		line-height: 150%;
+		letter-spacing: -1.5%;
+		font-weight: 500;
+		color: $text-color;
+		font-family: 'Inter', sans-serif;
+	}
+}
