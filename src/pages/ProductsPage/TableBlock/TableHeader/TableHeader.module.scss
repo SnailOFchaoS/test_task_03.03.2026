@@ -1,0 +1,57 @@
+@use '../../../../constants/styles.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+	@include scaled(padding-bottom, 40px);
+
+	.titleText {
+		font-family: 'Roboto', sans-serif;
+		@include scaled(font-size, 20px);
+		font-weight: 700;
+		color: $text-color;
+	}
+
+	.buttonContainer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		@include scaled(gap, 8px);
+
+
+		.refreshButton {
+			@include scaled(width, 42px);
+			@include scaled(height, 42px);
+			border: none;
+			background: none;
+			cursor: pointer;
+		}
+
+		.addButton {
+			@include scaled(font-size, 14px);
+			@include scaled(width, 147px);
+			@include scaled(height, 42px);
+			@include scaled(border-radius, 6px);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			background-color: $button-color;
+			cursor: pointer;
+			font-family: 'Cairo', sans-serif;
+			font-weight: 600;
+			color: $white-color;
+			padding: 0;
+
+			.plusCircleIcon{
+				@include scaled(width, 22px);
+				@include scaled(height, 22px);
+				@include scaled(margin-right, 15px);
+			}
+		}
+	}
+}

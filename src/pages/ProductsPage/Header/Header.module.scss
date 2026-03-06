@@ -1,0 +1,59 @@
+@use '../../../constants/styles.scss' as *;
+
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+  background-color: $white-color;
+	@include scaled(height, 105px);
+	@include scaled(border-radius, 10px);
+	@include scaled(padding-left, 30px);
+
+	.titleText{
+		position: absolute;
+		@include scaled(left, 30px);
+		@include scaled(top, 41.5px);
+		font-family: 'Roboto', sans-serif;
+		@include scaled(font-size, 24px);
+		line-height: 1.2;
+		font-weight: 700;
+		color: $text-color;
+	}
+
+	.searchLine{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: $background-search-color;
+		@include scaled(width, 1023px);
+		@include scaled(height, 48px);
+		@include scaled(border-radius, 12px);
+		@include scaled(padding-left, 20px);
+		@include scaled(padding-right, 20px);
+
+		.searchIcon{
+			@include scaled(width, 24px);
+			@include scaled(height, 24px);
+			@include scaled(margin-right, 8px);
+		}
+
+		.searchInput{
+			flex: 1;
+			@include scaled(height, 100%);
+			background-color: transparent;
+			border: none;
+			outline: none;
+			font-family: 'Roboto', sans-serif;
+			@include scaled(font-size, 14px);
+			@include scaled(line-height, 24px);
+			font-weight: 400;
+			color: $text-color;
+
+			&::placeholder {
+				color: $placeholde_search-text;
+			}
+		}
+	}
+}

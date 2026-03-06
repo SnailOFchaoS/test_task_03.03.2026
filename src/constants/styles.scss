@@ -7,6 +7,9 @@ $button-border-color: #367AFF;
 $line-color: #EDEDED;
 $link-color-grey: #6C6C6C;
 $link-color-blue: #242EDB;
+$background-color-grey: rgba(246, 246, 246, 1);
+$background-search-color: #F3F3F3;
+$placeholde_search-text: rgba(153, 153, 153, 1);
 
 @mixin scaled($property, $value, $scale: 0.67) {
 	#{$property}: $value * $scale;

@@ -1,0 +1,9 @@
+@use '../../../constants/styles.scss' as *;
+
+.container {
+  background-color: $white-color;
+	display: flex;
+	flex-direction: column;
+	@include scaled(border-radius, 12px);
+	@include scaled(padding, 30px);
+}

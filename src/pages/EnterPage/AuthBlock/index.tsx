@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import LoginInput from './LoginInput'
 import PassInput from './PassInput'
 import CreateNewUserLink from './CreateNewUserLink'
@@ -6,6 +7,8 @@ import styles from './AuthBlock.module.scss'
 import logo from '../../../assets/logo.svg'
 
 const AuthBlock = () => {
+  const navigate = useNavigate()
+
   return (
     <div className={styles.container}>
 			<div className={styles.workSpace}>
@@ -28,7 +31,12 @@ const AuthBlock = () => {
 					<input type="checkbox" className={styles.checkbox} />
 					<span className={styles.checkboxLabel}>Запомнить данные</span>
 				</label>
-				<button className={styles.loginButton}>Войти</button>
+				<button 
+					className={styles.loginButton}
+					onClick={() => navigate('/products')}
+				>
+					Войти
+				</button>
 				<CreateNewUserLink />
 			</div>
     </div>
